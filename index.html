@@ -1,15 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluent Calculator 2026</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="calc-box">
-        <input type="text" id="res" readonly>
-        <div class="keys">
-            <button onclick="calc('7')">7</button><button onclick="calc('8')">8</button><button onclick="calc('9')">9</button>
-            <button onclick="calc('4')">4</button><button onclick="calc('5')">5</button><button onclick="calc('6')">6</button>
-            <button onclick="clr()">C</button><button onclick="solve()">=</button>
+<body class="dark-mode"> <div class="glass-calculator">
+        <div class="header">
+            <span>Calculator</span>
+            <button id="theme-toggle">🌙</button>
+        </div>
+        <input type="text" id="display" placeholder="0" readonly>
+        <div class="keypad">
+            <button class="op" onclick="clearDisplay()">C</button>
+            <button class="op" onclick="deleteLast()">⌫</button>
+            <button class="op" onclick="append('/')">÷</button>
+            <button class="op" onclick="append('*')">×</button>
+            
+            <button onclick="append('7')">7</button>
+            <button onclick="append('8')">8</button>
+            <button onclick="append('9')">9</button>
+            <button class="op" onclick="append('-')">-</button>
+            
+            <button onclick="append('4')">4</button>
+            <button onclick="append('5')">5</button>
+            <button onclick="append('6')">6</button>
+            <button class="op" onclick="append('+')">+</button>
+            
+            <button onclick="append('1')">1</button>
+            <button onclick="append('2')">2</button>
+            <button onclick="append('3')">3</button>
+            <button class="equals" onclick="calculate()">=</button>
+            
+            <button class="zero" onclick="append('0')">0</button>
+            <button onclick="append('.')">.</button>
         </div>
     </div>
     <script src="script.js"></script>
